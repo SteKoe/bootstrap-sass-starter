@@ -1,0 +1,23 @@
+{
+  "name": "ma-seminar",
+  "version": "1.0.0",
+  "authors": [
+    "Stephan Köninger <mail@stekoe.de>"
+  ],
+  "private": true,
+  "description": "Little web pages which carries the results of a seminar paper which has been written in 2015",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "jquery": "~2.1.3",
+    "bootstrap-sass-official": "~3.3.1"
+  }
+}
