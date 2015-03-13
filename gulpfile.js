@@ -2,14 +2,19 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     usemin = require('gulp-usemin'),
     uglify = require('gulp-uglify'),
-    minifyHtml = require('gulp-minify-html'),
     minifyCss = require('gulp-minify-css'),
     rev = require('gulp-rev'),
+    bower = require('gulp-bower'),
     del = require('del');
 
 // === Delete Tasks
 gulp.task('clean', function(cb) {
     del(['build/','src/css/'], cb);
+});
+
+gulp.task('bower', function() {
+    return bower()
+        .pipe(gulp.dest('./src/vendors'));
 });
 
 gulp.task('compile-sass', ['clean'], function () {
@@ -33,6 +38,6 @@ gulp.task('usemin', ['compile-sass'], function () {
         .pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', ['usemin'], function() {
+gulp.task('default', ['bower', 'usemin'], function() {
 
 });

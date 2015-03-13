@@ -10,7 +10,6 @@ Edit files in ```src``` directory as desired and run following commands:
 
 ```shell
 npm install
-bower install
 gulp
 ```
 
